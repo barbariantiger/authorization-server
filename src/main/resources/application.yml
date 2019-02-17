@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    dbcp2:
+      driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/test
+    username: sa
+    password: sa
+  h2:
+    console:
+      path: /h2
+      enabled: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
