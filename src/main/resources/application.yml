@@ -2,9 +2,10 @@ spring:
   datasource:
     dbcp2:
       driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:~/test
+    url: jdbc:h2:file:~/Desktop/test
     username: sa
     password: sa
+    initialization-mode: never
   h2:
     console:
       path: /h2
@@ -14,4 +15,5 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
+    show-sql: true

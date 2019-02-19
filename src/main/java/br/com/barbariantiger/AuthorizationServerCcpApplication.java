@@ -22,5 +22,4 @@ public class AuthorizationServerCcpApplication {
 		KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("jwks.jks"), "jwtoken".toCharArray());
 		return new KeyPair(keyStoreKeyFactory.getKeyPair("jwtoken").getPublic(), keyStoreKeyFactory.getKeyPair("jwtoken").getPrivate());
 	}
-
 }
