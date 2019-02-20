@@ -28,8 +28,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/login").permitAll()
-		.and().formLogin().permitAll()
+		http.authorizeRequests()
+		.mvcMatchers("/.well-known/jwks.json", "/login").permitAll()
+	    .and().formLogin().permitAll()
 		.and().csrf().disable();
 	}
 }
